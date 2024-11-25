@@ -1,0 +1,10 @@
+[
+    {
+        "user_query": "hi",
+        "chatbot_response": "Hello! How can I assist you today?"
+    },
+    {
+        "user_query": "what is refund plicy",
+        "chatbot_response": "The refund policy for student security deposits involves several steps including adjustments for any outstanding fees, deductions for non-submission of withdrawal notices, and other dues like library books. The process is initiated upon approval by SMF-RO, and includes verification and submission of necessary forms. Refunds are processed within 45 days and are sent via a crossed cheque to the parent/guardian. For detailed information on the refund policy, please visit this link: [Refund of Student Security](https://index.beaconhouse.net/knowledgebase/refund-of-student-security)."
+    }
+]
