@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Logs</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7fc;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+
+        /* Container Styling */
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 20px;
+            text-align: center;
+            background-color: #fff;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        th,
+        td {
+            padding: 15px 20px;
+            text-align: left;
+            font-size: 1rem;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #3f51b5;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        tr:hover {
+            background-color: #f5f7f9;
+        }
+
+        .timestamp {
+            width: 180px;
+            word-wrap: break-word;
+        }
+
+        /* Link Styling */
+        .back-link {
+            text-decoration: none;
+            color: #fff;
+            background-color: #3f51b5;
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            margin-top: 20px;
+            display: inline-block;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .back-link:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            table {
+                font-size: 0.9rem;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            .back-link {
+                font-size: 1rem;
+                padding: 10px 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Chat Logs</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th class="timestamp">Timestamp</th>
+                    <th>User Query</th>
+                    <th>Chatbot Response</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for log in chat_logs %}
+                <tr>
+                    <td>{{ log.timestamp }}</td>
+                    <td>{{ log.user_query }}</td>
+                    <td>{{ log.chatbot_response }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <a href="/" class="back-link">Back to Chat</a>
+    </div>
+
+</body>
+
+</html>
